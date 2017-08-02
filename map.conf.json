@@ -38,6 +38,8 @@
 				"terrain ... buildings",
 				"terrain ... fence",
 				"tents ... tarps",
+				"tents ... village tents",
+				"tents ... village tents ... labels",
 				"objects ... tree",
 				"objects ... buildings",
 				"objects ... buildings ... toilet",
@@ -61,8 +63,23 @@
 			"layers": ["terrain ... villages ... borders"],
 			"path": "../map/villages.dxf",
 			"auto_import_layers": "false",
-			"handle_prefix": "v"
+			"handle_prefix": "vill"
+		},
+		"noc": {
+			"layers": ["team-noc ... cables ... copper",
+				"team-noc ... cables ... fibre-single-mode",
+				"team-noc ... datenklos ... dk-and-label",
+				"team-noc ... datenklos ... radius-40m",
+				"team-noc ... scafftubes",
+				"team-noc ... labels",
+				"team-noc ... switch-in-tent"
+				],
+
+			"path": "../map/noc.dxf",
+			"auto_import_layers": "false",
+			"handle_prefix": "vill"
 		}
+
 
 	},
 	
@@ -166,6 +183,22 @@
 			"z-index": 2
 		},
 		{
+			"name": "Village tents",
+			"visible": "false",
+			"layer_style": {
+				"tents ... village tents": {
+					"line-color": "magenta",
+					"z-index": 3,
+					"line-width": 2
+				},
+				"tents ... village tents ... labels": {
+					"text-color": "black",
+					"selectable": false
+				}
+			},
+			"z-index": 2
+		},
+		{
 			"name": "Field names",
 			"layer_style": {
 				"terrain ... fields ... labels": {
@@ -177,6 +210,7 @@
 		},
 		{
 			"name": "Campers",
+			"visible": "false",
 			"layer_style": {
 				"terrain ... camper spot": {
 					"line-color": "#800080",
@@ -247,7 +281,7 @@
 			"z-index": 2
 		},
 		{ 	"name": "Village Borders",
-			"visible": "true",
+			"visible": "false",
 			"layer_style": {
 				"terrain ... villages ... borders": {
 					"line-color": "green",
@@ -302,7 +336,7 @@
 			"z-index": 3
 		},
 		{
-			"name": "Power -- APPROXIMATE",
+			"name": "Build-up Power",
 			"visible": "false",
 			"layer_style": {
 				"infrastructure": {
